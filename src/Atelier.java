@@ -1,11 +1,11 @@
-import java.time.*;
+import java.time.LocalTime;
+import java.util.List;
 
-import java.util.*;
-
-public class Consultation extends Rendezvous {
-
-    public Consultation(LocalTime heuredebut, LocalTime heurefin, List<Patient> patients){
+public class Atelier extends Rendezvous{
+    private String thematique ;
+    public Atelier(LocalTime heuredebut, LocalTime heurefin, List<Patient> patients,String thematique){
         super(heuredebut,heurefin, patients);
+        this.thematique=thematique;
     }
     public LocalTime getHeuredebut(){
         return heuredebut;
@@ -25,8 +25,15 @@ public class Consultation extends Rendezvous {
     public void ajouterObservation(String observation) {
         this.observation = observation;
     }
+
+    public void ajouterPatient(Patient patient) {
+        patients.add(patient);
+    }
+
+    public List<Patient> getPatients() {
+        return patients;
+    }
     public String getObservation() {
         return observation;
     }
-
 }
