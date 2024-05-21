@@ -26,7 +26,10 @@ public class Orthophoniste {
     public boolean seConnecter(String email, String motDePasse) {
         return this.mail.equals(email) && this.motdepasse.equals(motDePasse);
     }
+    public void afficherorthophoniste(){
+        System.out.println("nom : "+nom);
 
+    }
     public boolean programmerRendezvous(LocalDate date, Rendezvous nouveauRdv) {
         if (agenda.estDisponible(date, nouveauRdv)) {
             agenda.ajouterRendezvous(date, nouveauRdv);
@@ -35,5 +38,8 @@ public class Orthophoniste {
             System.out.println("Rendez-vous non disponible pour cette date et heure.");
             return false;
         }
+    }
+    public void afficherAgenda() {
+        agenda.afficherAgenda();
     }
 }
