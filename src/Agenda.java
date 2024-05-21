@@ -35,7 +35,7 @@ public class Agenda {
         for (LocalDate date : jours.keySet()) {
             System.out.println("Date: " + date);
             Jour jour = jours.get(date);
-            for (Rendezvous rdv : jour.getRdvdv()) {
+            for (Rendezvous rdv : jour.getRdv()) {
                 System.out.println(rdv.consulterDetails());
             }
             System.out.println();
