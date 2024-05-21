@@ -11,7 +11,7 @@ public  abstract class Patient {
     private String email;
     private String LieuDeNaissance;
     /*private List<RendezVous> rendezVous;
-    private List<BilanOrthophonique> bilans;
+    private List<BilanOrthophonique.java> bilans;
     private List<FicheSuivi> fichesSuivi;*/
     public Patient(String nom, String prenom, LocalDate dateDeNaissance, String adresse, String telephone, String email, String LieuDeNaissance) {
        cpt++;
