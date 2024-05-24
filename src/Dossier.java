@@ -6,9 +6,11 @@ public class Dossier {
     private ArrayList<Rendezvous> rendezvous = new ArrayList<>();
     private ArrayList<BilanOrthophonique> bilanOrthophoniques = new ArrayList<>();
     private ArrayList<FicheSuivi> ficheSuivis = new ArrayList<>();
+    private Patient patient;
 
-    public Dossier() {
+    public Dossier(Patient patient) {
         this.numero = index++;
+        this.patient = patient;
     }
 
     public void addRendezVous(Rendezvous rendezvous) {
@@ -20,6 +22,10 @@ public class Dossier {
 
     public int getNumero() {
         return numero;
+    }
+
+    public Patient getPatient() {
+        return patient;
     }
 
     public ArrayList<Rendezvous> getRendezvous() {
